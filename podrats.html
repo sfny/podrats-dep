@@ -3,12 +3,25 @@
 </head>
 
 <body>
+  {{>topNav}}
   <div class="container-fluid">
-    {{>topNav}}
+    <div class="row">
       <div class="col-xl-4 col-xl-offset-4">
         {{> profileCard }}
       </div>
     </div>
+      <div class="row">
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+    </div>
+  </div>
 </body>
 
 <template name="profileCard">
@@ -29,6 +42,9 @@
       <div id="collapseOne" class="collapse">
         A tiny radio show about design, architecture & the 99% invisible activity that shapes our world.
         {{> player }}
+        <audio src="https://soundcloud.com/iexplorer/sex-bots" autoplay>
+          Your browser does not support the <code>audio</code> element.
+        </audio>
     </div>
   </li>
   <li class="list-group-item">
@@ -77,4 +93,7 @@
 
 <Template name="player">
   <p><b>player</b></p>
+  <div id="player">
+  </div>
+
 </Template>
