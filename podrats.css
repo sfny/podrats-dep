@@ -1,0 +1,36 @@
+/* CSS declarations go here */
+.card {
+  max-width: 25rem;
+  margin:20px;
+  padding-bottom: 20px;
+  border-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+.card-img-top {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+}
+
+.card-inverse {
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.maxWidth {
+  width: 100%;
+  max-width: 300px;
+}
+
+#bio {
+  padding-bottom: 20px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Override @primary color with one took from _colors.less */
