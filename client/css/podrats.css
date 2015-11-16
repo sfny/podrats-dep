@@ -1,0 +1,50 @@
+/* CSS declarations go here */
+.card {
+  max-width: 25rem;
+  margin:20px;
+  padding-bottom: 20px;
+  border-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+  /*animation stuff*/
+  -webkit-animation: bounce 200ms ease-out;
+	-moz-animation: bounce 200ms ease-out;
+	-o-animation: bounce 200ms ease-out;
+	animation: bounce 200ms ease-out;
+}
+/* the card CSS animation in one line */
+@-webkit-keyframes bounce { 95%{-webkit-transform:translateY(-3%);}}
+
+.card-img-top {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+}
+
+.card-block {
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.maxWidth {
+  width: 100%;
+  max-width: 300px;
+}
+
+.row{
+  height: 46rem;
+  vertical-align: 10rem;
+}
+
+#bio {
+  padding-bottom: 20px;
+}
+
+ul, ol {
+  list-style: none;
+}
+/* Override @primary color with one took from _colors.less */
