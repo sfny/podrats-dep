@@ -1,0 +1,99 @@
+<head>
+  <title>podrats</title>
+</head>
+
+<body>
+  {{>topNav}}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lx-4 col-xl-offset-4">
+        {{> profileCard }}
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+      <div class="col-xl-4">
+        {{> profileCard }}
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="profileCard">
+<div class="card">
+  <div class="center-block text-center" id="bio">
+    <img class="card-img-top" src="purpleAndTeal.png" alt="Card image cap" id='avatar'>
+    <h5 class="card-title">Jacob Hartog</h5>
+    <div class='bio-link' color="#818A">
+      bio: <a href="http://about.me/jacobhartog" class="card-link">about.me/jacobhartog</a>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush" id="accordion" aria-multiselectable="false">
+    <li class="list-group-item">
+      <div class="list-group-item-heading" id="headingOne">
+      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          99 Percent Invisible</a> </h4>
+      </div>
+      <div id="collapseOne" class="collapse">
+        A tiny radio show about design, architecture & the 99% invisible activity that shapes our world.
+        {{> player }}
+        <audio src="https://soundcloud.com/iexplorer/sex-bots" autoplay>
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading" role="tab" id="headingTwo">
+    <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="">
+        RadioLab</a> </h4>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      Weaving stories and science into sound and music-rich documentaries.
+  </div>
+</li>
+<li class="list-group-item">
+  <div class="list-group-item-heading" role="tab" id="headingThree">
+  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="">
+      Reply All</a> </h4>
+  </div>
+  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+     A show about the internet, hosted by PJ Vogt and Alex Goldman.
+</div>
+</li>
+</ul>
+  <div class="card-block card-inverse card-info text-center">
+    <a href="#" class="card-link" color="white">More</a>
+  </div>
+</div>
+</template>
+
+<template name="topNav">
+  <nav class="navbar navbar-dark" style="background-color: #000000;">
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    <a class="navbar-brand" href="#"><img style="height:34px; width:100px" src="podrats_tinylogo.png" alt="PodRats"></a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</template>
+
+<Template name="player">
+  <p><b>player</b></p>
+  <div id="player">
+  </div>
+
+</Template>
