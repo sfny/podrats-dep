@@ -10,10 +10,6 @@ if (Meteor.isClient) {
             {
               title: "99 Percent Invisible",
               blurb: "A tiny radio show about design, architecture & the 99% invisible activity that shapes our world."
-            },
-            {
-              title: "Radiolab",
-              blurb: "Weaving stories and science into sound and music-rich documentaries."
             }
           ]
         },

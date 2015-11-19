@@ -3,7 +3,6 @@ App = React.createClass({
     var profileCards = this.props.users.map(function(user){
       return(<ProfileCard user={user} />)
     });
-    console.log(profileCards)
     return(profileCards)
   },
 
