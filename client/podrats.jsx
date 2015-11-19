@@ -5,15 +5,45 @@ if (Meteor.isClient) {
       users: [
         {
           name: "Aaron",
-          url: "http://aaronstrick.com"
+          url: "http://aaronstrick.com",
+          podcasts: [
+            {
+              title: "99 Percent Invisible",
+              blurb: "A tiny radio show about design, architecture & the 99% invisible activity that shapes our world."
+            },
+            {
+              title: "Radiolab",
+              blurb: "Weaving stories and science into sound and music-rich documentaries."
+            }
+          ]
         },
         {
           name: "Jacob",
-          url: "http://fuckcoding.com"
+          url: "http://fuckcoding.com",
+          podcasts: [
+            {
+              title: "Reply All",
+              blurb: "A show about the internet, hosted by PJ Vogt and Alex Goldman."
+            },
+            {
+              title: "Radiolab",
+              blurb: "Weaving stories and science into sound and music-rich documentaries."
+            }
+          ]
         },
         {
           name: "Ben",
-          url: "http://ben.com"
+          url: "http://ben.com",
+          podcasts: [
+            {
+              title: "Guardian Football Weekly",
+              blurb: "A weekly stroll through world football."
+            },
+            {
+              title: "Radiolab",
+              blurb: "Weaving stories and science into sound and music-rich documentaries."
+            }
+          ]
         }
       ]
     }

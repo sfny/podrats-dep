@@ -1,7 +1,7 @@
 App = React.createClass({
   renderCards: function() {
     var profileCards = this.props.users.map(function(user){
-      return(<ProfileCard name={user.name} url={user.url} />)
+      return(<ProfileCard user={user} />)
     });
     console.log(profileCards)
     return(profileCards)
