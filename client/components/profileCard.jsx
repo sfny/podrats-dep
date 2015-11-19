@@ -1,11 +1,4 @@
 ProfileCard = React.createClass({
-  renderButton: function() {
-    return (
-      <div className="card-block card-inverse card-info text-center">
-        <a href="#" className="card-link" color="white">More</a>
-      </div>
-    )
-  },
   renderAvatar: function(user) {
     return (
       <div className="center-block text-center" id="bio">
@@ -19,13 +12,23 @@ ProfileCard = React.createClass({
   },
   renderPodcasts: function(user) {
     var podList = [];
-    for (var i in user.podcasts) {
+    var showMore = true;
+    for (i = 0; i < 3; i++) {
+      if (user.podcasts[i] === undefined) {
+        showMore = false;
+        break;
+      }
       podList.push(this.renderPodRow(user, i))
+    }
+    if (showMore) {
+      var showMoreButton = this.renderButton()
     }
     return (
       <ul className="list-group list-group-flush" id="accordion" aria-multiselectable="false">
         {podList}
       </ul>
+        {showMoreButton}
+
     )
   },
   renderPodRow: function(user, num){
@@ -44,6 +47,13 @@ ProfileCard = React.createClass({
       </li>
     )
   },
+  renderButton: function() {
+    return (
+      <div className="card-block card-inverse card-info text-center">
+        <a href="#" className="card-link" color="white">More</a>
+      </div>
+    )
+  },
 
   render: function() {
     var user = this.props.user
@@ -51,7 +61,6 @@ ProfileCard = React.createClass({
       <div className="card">
         {this.renderAvatar(user)}
         {this.renderPodcasts(user)}
-        {this.renderButton()}
       </div>
     );
   }
