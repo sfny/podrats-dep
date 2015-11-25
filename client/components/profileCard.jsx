@@ -24,24 +24,25 @@ ProfileCard = React.createClass({
       var showMoreButton = this.renderButton()
     }
     return (
-      <ul className="list-group list-group-flush" id="accordion" aria-multiselectable="false">
-        {podList}
-      </ul>
+      <div className="podcasts">
+        <ul className="list-group list-group-flush" id="accordion" aria-multiselectable="false">
+          {podList}
+        </ul>
         {showMoreButton}
-
+      </div>
     )
   },
   renderPodRow: function(user, num){
     return (
-      <li className="list-group-item">
-        <div className="list-group-item-heading" id="headingOne">
+      <li className="list-group-item" key={"podcast-"+user+"-"+"-"+num}>
+        <div className="list-group-item-heading">
           <h4 className="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <a data-toggle="collapse" data-parent="#accordion" href={"#collapse"+num}>
               {user.podcasts[num].title}
             </a>
           </h4>
         </div>
-        <div id="collapseOne" className="collapse">
+        <div id={"#collapse"+num} className="collapse">
           {user.podcasts[num].blurb}
         </div>
       </li>

@@ -11,9 +11,10 @@ App = React.createClass({
     return (
       <div>
         <TopNav />
-        <h1>Here's a Title</h1>
-        {cards}
-
+        <div className="container">
+          <h1>Here's a Title</h1>
+          {cards}
+        </div>
       </div>
     );
   }
