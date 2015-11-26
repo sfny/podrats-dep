@@ -37,12 +37,12 @@ ProfileCard = React.createClass({
       <li className="list-group-item" key={"podcast-"+user+"-"+"-"+num}>
         <div className="list-group-item-heading">
           <h4 className="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href={"#collapse"+num}>
+            <a data-toggle="collapse" data-parent="#accordion" data-target={"#collapse"+user.name+num}>
               {user.podcasts[num].title}
             </a>
           </h4>
         </div>
-        <div id={"#collapse"+num} className="collapse">
+        <div className="collapse" id={"collapse"+user.name+num}>
           {user.podcasts[num].blurb}
         </div>
       </li>
