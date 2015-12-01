@@ -27,3 +27,6 @@ npm-container
 
 kadira:flow-router
 http
+accounts-ui
+accounts-password
+peerlibrary:xml2js
