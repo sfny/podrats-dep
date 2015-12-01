@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 .card {
   max-width: 25rem;
-  margin:20px;
+  margin:1.5rem;
   padding-bottom: 20px;
   border-radius: 3%;
   border-bottom-left-radius: 3%;
@@ -32,7 +32,7 @@
 
 .maxWidth {
   width: 100%;
-  max-width: 300px;
+  max-width: 358px;
 }
 
 .row{
@@ -46,5 +46,9 @@
 
 ul, ol {
   list-style: none;
+}
+
+audio {
+  width: 22.5rem;
 }
 /* Override @primary color with one took from _colors.less */

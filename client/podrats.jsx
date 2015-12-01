@@ -1,5 +1,4 @@
 if (Meteor.isClient) {
-
  // This code is executed on the client only
  Accounts.ui.config({
    passwordSignupFields: "USERNAME_ONLY"
@@ -238,6 +237,7 @@ if (Meteor.isClient) {
             "url_itunes": "https://itunes.apple.com/podcast/jim-harolds-campfire/id310656913?mt=2",
             "image": "http://jimharold.com/wp-content/uploads/2013/08/campfire_1400.jpg"
         },
+      //#######
         {
             "name": "Let's Make Mistakes",
             "description": "Mike and Jessie talk about design, with a lot of tangents along the way.",
@@ -616,7 +616,8 @@ if (Meteor.isClient) {
         }
       ]
     }
+    // needs a Meteor.call(xmlGetter('http://feeds.feedburner.com/buzzsprout/uJEz')) on the client somewhere.
     // Use Meteor.startup to render the component after the page is ready
-    React.render(<App {...appData} />, document.getElementById("render-target"));
+    ReactDOM.render(<App {...appData} />, document.getElementById("render-target"));
   });
 }

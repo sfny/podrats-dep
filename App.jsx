@@ -1,7 +1,7 @@
 App = React.createClass({
   renderCards: function() {
     var profileCards = this.props.users.map(function(user){
-      return(<ProfileCard user={user} />)
+      return(<ProfileCard user={user} key={user.name} />)
     });
     return(profileCards)
   },
@@ -12,7 +12,6 @@ App = React.createClass({
       <div>
         <TopNav />
         <div className="container">
-          <h1>Here's a Title</h1>
           {cards}
         </div>
       </div>

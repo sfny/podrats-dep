@@ -44,6 +44,10 @@ ProfileCard = React.createClass({
         </div>
         <div className="collapse" id={"collapse"+user.name+num}>
           {user.podcasts[num].blurb}
+          < SimpleForm />
+        <audio className="player" controls="controls" src="http://cdn.99percentinvisible.org/wp-content/uploads/190-Fixing-the-Hobo-Suit.mp3">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
         </div>
       </li>
     )
