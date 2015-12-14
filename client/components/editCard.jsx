@@ -1,13 +1,4 @@
-ProfileCard = React.createClass({
-  mixins: [ReactMeteorData],
-  PropTypes: {},
-
-  getMeteorData() {
-      return {
-          currentUser: Meteor.user()
-      };
-  },
-  
+EditProfileCard = React.createClass({
   renderAvatar: function(user) {
     return (
       <div className="center-block text-center" id="bio">
@@ -19,19 +10,11 @@ ProfileCard = React.createClass({
       </div>
     )
   },
-  renderPodcasts: function(user) {
+  renderPodcastsToEdit: function(user) {
     var podList = [];
-    var showMore = true;
-    for (i = 0; i < 3; i++) {
-      if (user.podcasts[i] === undefined) {
-        showMore = false;
-        break;
-      }
-      podList.push(this.renderPodRow(user, i))
-    }
-    if (showMore) {
-      var showMoreButton = this.renderMoreButton()
-    }
+    podList.push(this.renderPodRow(user))
+    var showMoreButton = this.renderButton()
+
     return (
       <div className="podcasts">
         <ul className="list-group list-group-flush" id="accordion" aria-multiselectable="false">
@@ -49,11 +32,9 @@ ProfileCard = React.createClass({
             <a data-toggle="collapse" data-parent="#accordion" data-target={"#collapse"+user.name+num}>
               {user.podcasts[num].title}
             </a>
-            <button type="button" className="btn btn-danger pull-right" aria-closed="true">
-              x
-            </button>
-            </h4>
-
+          </h4>
+          <button type="button" class="btn btn-danger">
+           <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
         </div>
         <div className="collapse" id={"collapse"+user.name+num}>
           {user.podcasts[num].blurb}
@@ -65,7 +46,7 @@ ProfileCard = React.createClass({
       </li>
     )
   },
-  renderMoreButton: function() {
+  renderButton: function() {
     return (
       <div className="card-block card-inverse card-info text-center">
         <a href="#" className="card-link" color="white">More</a>
@@ -73,22 +54,12 @@ ProfileCard = React.createClass({
     )
   },
 
-  renderEditButton: function(user) {
-    return (
-      <div className="editCardButton">
-      <button type="button" className="btn btn-primary pull-right">edit</button>
-      </div>
-    )
-  },
-
   render: function() {
     var user = this.props.user
     return (
-      <div className="col-md-6 col-lg-6 col-xl-4">
-        <div className="card">
-          {this.renderAvatar(user)}
-          {this.renderPodcasts(user)}
-          </div>
+      <div className="card">
+        {this.renderAvatar(user)}
+        {this.renderPodcastsToEdit(user)}
       </div>
     );
   }

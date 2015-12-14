@@ -618,6 +618,6 @@ if (Meteor.isClient) {
     }
     // needs a Meteor.call(xmlGetter('http://feeds.feedburner.com/buzzsprout/uJEz')) on the client somewhere.
     // Use Meteor.startup to render the component after the page is ready
-    ReactDOM.render(<App {...appData} />, document.getElementById("render-target"));
+    ReactDOM.render(<MainLayout {...appData} />, document.getElementById("render-target"));
   });
 }
